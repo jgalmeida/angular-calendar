@@ -1,0 +1,53 @@
+
+<div class="centerCalendar">
+	<div class="monthNavigation">
+		<span class="titleMonth">
+			{{month_name}}
+		</span>
+		<div class="arrowLeft" ng-click="previousMonth()"><</div>
+		<span class="today" ng-click="today()">Hoje</span>
+		<div class="arrowRight" ng-click="nextMonth()">></div>
+	</div>
+	<table border="2">
+		<tr>
+			<th>Segunda</th>
+			<th>Terça</th>
+			<th>Quarta</th>
+			<th>Quinta</th>
+			<th>Sexta</th>
+			<th>Sábado</th>
+			<th>Domingo</th>
+
+		</tr>
+		<tr ng-repeat="week in weeks()">
+			<td class="day" ng-repeat="day in week.days">
+				<div class="dayNumber" ng-click="showEvents(day.fdate())">{{day.day_only()}}</div>
+				<a class="addEvent" open-dialog="{{day.fdate()}}" class="showModal">+</a>
+				<ul id="dayEventsNames-{{day.fdate()}}">
+					<li class="event" ng-repeat="event in day.events">
+						<div ng-click="editEvent(event.id)">{{ event.name }}</div>
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+	<div id="eventModal" class="modal hide fade" ng-controller="EventModalController" tabindex="-1" role="dialog">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Adicionar Evento</h3>
+		</div>
+		<div class="modal-body">
+			<!-- <label>Name</label> -->
+			<input type="text" ng-model="name" placeholder="Nome" />
+			<!-- <label>Description</label> -->
+			<input type="text" ng-model="description" placeholder="Descrição"/>
+			<input type="hidden" ng-model="date" />
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+			<button id="saveEventModal" class="btn btn-primary" data-dismiss="modal" ng-click="AddEvent()">Guardar</button>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="centerCalendar">
+	<div class="titleBox">
+		<div class="arrowBack" onclick="history.go(-1);"><</div>
+		Todos os Eventos <span>- {{ day.fdate() }}</span>
+	</div>
+	<ul class="listEvents">
+		<li ng-repeat="event in day.events" open-dialog>
+			<div class="titleEvent" ng-model="name">{{event.name}}</div>
+			<div class="descriptionEvent" ng-model="description">{{event.description}}</div>
+		</li>
+	</ul>
+</div>

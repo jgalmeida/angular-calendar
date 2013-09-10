@@ -1,0 +1,402 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,300,700);
+
+.monthNavigation {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 25px;
+}
+
+
+.centerCalendar {
+	margin: 45px;
+	background: white;
+	padding: 30px;
+	position: relative;
+}
+
+
+
+span.titleMonth {
+	font-family: 'Raleway', sans-serif;
+	font-size: 300%;
+	font-weight: 200;
+	width: 100%;
+	height: 70px;
+	line-height: 60px;
+	color: #3bc8b8;
+	float: left;
+}
+
+.arrowLeft {
+	background: #3bc8b8;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 40px;
+	padding: 15px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	float: left;
+	line-height: 13px;
+}
+
+.arrowBack {
+	/*background: #f3f1e4;*/
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 40px;
+	padding: 15px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	float: left;
+	line-height: 13px;
+	margin: -15px 20px 0 -15px;
+	border-right:1px solid #35b6a7;
+}
+
+.arrowBack:hover{
+	background: #339183;
+	color:white;
+}
+
+.arrowRight {
+	background: #3bc8b8;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 40px;
+	padding: 15px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	line-height: 13px;
+}
+
+.arrowLeft:hover, .arrowRight:hover {
+	background: #339183;
+}
+
+.today {
+	background: #3bc8b8;
+	height: 20px;
+	text-align: center;
+	line-height: 36px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 150%;
+	cursor: pointer;
+	text-align: center;
+	margin-left: 5px;
+	line-height: 20px;
+	float: left;
+	padding: 15px;
+}
+
+
+.today:hover {
+	background: #339183;
+}
+
+table {
+	border: none;
+	border-collapse: collapse;
+	font-family: 'Titillium Web', sans-serif;
+	width: 100%;
+}
+
+th {
+	border: none;
+	font-size: 150%;
+	text-transform: uppercase;
+	color: #999999;
+	padding: 15px;
+	font-weight: 400;
+}
+
+td {
+	border: 1px solid #ededed;
+	height: 6em;
+	width: 10em;
+	padding: 5px;
+	vertical-align: top;
+	padding: 15px;
+	position: relative;
+}
+
+caption {
+	font-size: 300%;
+	font-style: italic;
+}
+
+.dayNumber {
+	text-align: left;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 250%;
+	color: #afad98;
+	height: 40px;
+	float: left;
+	line-height: 30px;
+	cursor:pointer;
+}
+
+.dayNumber:hover{
+	color:#3bc8b8;
+}
+
+a.addEvent {
+	color: #afad98 !important;
+	padding:15px 5px;
+	text-align: center;
+	background: #f3f1e4;
+	float: right;
+	width: 22px;
+	height: 2px;
+	text-align: center;
+	font-size: 40px;
+	color: #3bc8b8 !important;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	line-height: 2px;
+}
+
+a.addEvent:hover {
+	background: #3bc8b8;
+	color: white !important;
+	text-decoration:none;
+}
+
+.notes {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 80%;
+	text-align: left;
+}
+
+.weekend {
+	background: gray;
+	background-color: #F3F3F3;
+}
+
+.showModal {
+	height: 10px;
+}
+
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+
+ul.listEvents {
+	list-style-type: none;
+	margin: 0px;
+	float: none;
+	width: 100%;
+}
+
+ul.listEvents li{
+	border-bottom: 1px solid #ededed;
+	padding:18px 0px;
+}
+
+ul.listEvents .titleEvent {
+	font-family: 'Raleway', sans-serif;
+	font-size: 150%;
+	font-weight: 200;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #3bc8b8;
+	float: left;
+	border-left: 3px solid #3bc8b8;
+	padding: 0 0 0 15px;
+	margin-bottom: 5px;
+}
+
+ul.listEvents .descriptionEvent {
+	padding: 0 0 0 20px;
+	color: #999999;
+}
+
+
+
+
+
+li.event {
+	line-height: 18px;
+	border-left: 3px solid #3bc8b8;
+	padding: 0 5px;
+	margin: 10px 0;
+	cursor:pointer;
+	line-height:26px;
+	color:#333;
+	
+}
+
+li.event:hover {
+	background: #3bc8b8;
+	color:white;
+}
+
+/* Modals */
+
+.modal{
+	border-radius:0;
+}
+
+#myModalLabel{
+	font-family: 'Raleway', sans-serif;
+	font-size: 200%;
+	font-weight: 200;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #3bc8b8;
+}
+
+label{
+	font-family: 'Raleway', sans-serif;
+	font-size: 150%;
+	font-weight: 200;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #3bc8b8;
+	margin-left: 15px;
+}
+
+.close {
+	background: #3bc8b8;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	font-size: 40px;
+	padding: 0 0 7px 0;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	line-height: 0px;
+	opacity:1;
+	border:none;
+	margin-top: 7px !important;
+}
+
+input, textarea, select, .uneditable-input {
+	display: inline-block;
+	width: 510px;
+	height: 30px;
+	margin-bottom: 9px;
+	font-size: 18px;
+	color: #a4a4a4;
+	border: 1px solid #ededed;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	
+	text-align: left;
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 30px;
+	padding: 5px 10px;
+}
+
+/*input.editEvent{
+	margin-left: 15px;
+}*/
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgb(26, 188, 156);
+    box-shadow: none;
+}
+
+.btn-primary {
+	background: #3bc8b8 !important;
+	text-align: center;
+	font-size: 20px;
+	padding: 15px;
+	color: white !important;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	line-height: 13px;
+	border-radius:0px;
+}
+
+
+.btn-primary:hover {
+	background: #339183 !important;
+}
+
+.btn-delete {
+	background: #e74c3c !important;
+	text-align: center;
+	font-size: 20px;
+	padding: 15px;
+	color: white !important;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	line-height: 13px;
+	border-radius:0px;
+}
+
+
+.btn-delete:hover {
+	background: #c0392b !important;
+}
+
+.btn {
+	background: #f3f1e4;
+	text-align: center;
+	font-size: 20px;
+	padding: 15px;
+	color: #999999;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+	line-height: 13px;
+	border-radius:0px;
+	border:none;
+}
+
+.titleBox {
+	background: #3bc8b8;
+	height: 20px;
+	text-align: left;
+	line-height: 36px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 150%;
+	cursor: pointer;
+	line-height: 20px;
+	padding: 15px;
+	margin-bottom:15px;
+	
+}
+
+.titleBox span{
+	font-weight: 700;
+}
+
+.btFooter{
+	margin-top:20px;
+}
+
+
